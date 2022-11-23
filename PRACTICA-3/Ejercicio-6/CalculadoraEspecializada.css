@@ -1,0 +1,74 @@
+body { /* a=0 ; b=0 ; c=1  -> Especificidad = 1*/
+    color: black;
+    font-family: sans-serif;
+    background-color: rgb(255, 255, 255);
+    text-align: justify;
+}
+
+/* a=0 ; b=0 ; c=1 -> Especificidad = 1 */
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+form{ /* a=0 ; b=0 ; c=1 -> Especificidad = 1 */
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+    color:black;
+    border: solid 1px grey;
+    padding-bottom: 10px;
+    margin: auto;
+    background: rgb(255, 252, 224);
+    border-radius: 15px;
+}
+label{ /* a=0 ; b=0 ; c=1 -> Especificidad = 1 */
+    font-weight: bold;
+}
+h1 /* a=0 ; b=0 ; c=1 -> Especificidad = 1 */
+{
+    color: rgb(0, 0, 0);
+    background-color: rgb(243, 228, 255);
+    text-align: center;
+    font-size: 300%;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    padding: 50px 0;
+    border-radius: 20px;
+}
+input[type="text"] /* a=0 ; b=1 ; c=1 -> Especificidad = 11 */
+{
+    width: 95%;
+    font-size: 36px;
+    border: 5px solid grey;
+    text-align: center;
+    color: black;
+    background-color: rgb(255, 255, 255);
+}
+input[type = "number"]{ /* a=0 ; b=1 ; c=1 -> Especificidad = 11 */
+    width: 15%;
+    font-size: 32px;
+    border: 5px solid grey;
+    text-align: center;
+    color: black;
+    background-color: rgb(255, 255, 255);
+}
+input[type="button"] /* a=0 ; b=1 ; c=1 -> Especificidad = 11 */
+{
+    background-color: rgb(0, 128, 74);
+    margin: 1%;
+    color: white;
+    width: 15%;
+    text-align: center;
+    font-size: 160%;
+}
+input.actividad{ /* a=0 ; b=1 ; c=1 -> Especificidad = 11 */
+    background-color: rgb(89, 136, 238);
+    color: white;
+}
+input.comida{ /* a=0 ; b=1 ; c=1 -> Especificidad = 11 */
+    background-color: rgb(241, 85, 202);
+    color: white;
+}
